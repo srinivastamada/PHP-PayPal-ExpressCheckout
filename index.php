@@ -2,6 +2,10 @@
 require 'config.php';
 require 'class/paypalExpress.php';
 
+if(!empty($_SESSION['session_uid'])){
+  header('Location:home.php');
+}
+
 $errorMsgLogin ='';
 if (!empty($_POST['loginSubmit']))
 {
